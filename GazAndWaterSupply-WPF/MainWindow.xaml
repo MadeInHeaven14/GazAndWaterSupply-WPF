@@ -4,13 +4,27 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="METANIT.COM" Height="450" Width="300" Loaded="Window_Loaded" Closing="Window_Closing">
-    <StackPanel Margin="4">
-        <Label Content="Введите логин"/>
-        <TextBox x:Name="userTextBox" />
-        <Label Content="Введите сообщение"/>
-        <TextBox x:Name="messageTextBox" />
-        <Button x:Name="sendBtn" Content="Отправить" Click="Button_Click" IsEnabled="False" />
-        <ListBox x:Name="chatbox" />
-    </StackPanel>
+        Title="METANIT.COM" Height="450" Width="620">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="200"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Margin="4,4,4,4" Grid.Row="1" Grid.Column="1">
+            <Label Content="Авторизация" HorizontalAlignment="Center" FontSize="20" FontFamily="Segoe UI Black"></Label>
+            <Label Content="Логин" FontFamily="Segoe UI Black"></Label>
+            <TextBox x:Name="LoginBox"></TextBox>
+            <Label Content="Пароль" FontFamily="Segoe UI Black"></Label>
+            <TextBox x:Name="PasswordBox" Foreground="Black"></TextBox>
+            <Button Content="Вход" Margin="35" x:Name="BtnAutorization" Background="Gray" Foreground="Black" FontFamily="Segoe UI Black" Click="BtnAutorization_Click" ></Button>
+        </StackPanel>
+
+    </Grid>
 </Window>
